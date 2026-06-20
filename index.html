@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Love Meter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Love Meter</h1>
+        <p>Enter your name and your partner's name to see your love compatibility!</p>
+        <input type="text" id="name1" placeholder="Your Name">
+        <input type="text" id="name2" placeholder="Partner's Name">
+        <button onclick="calculateLove()">Calculate Love</button>
+        <div id="result"></div>
+
+
+    </div>
+    <script>
+        function calculateLove() {
+            const name1 = document.getElementById('name1').value;
+            const name2 = document.getElementById('name2').value;
+            const result = document.getElementById('result');
+
+            if (name1 && name2) {
+                // Simple love calculation (replace with actual logic)
+                const loveScore = Math.floor(Math.random() * 101);
+                result.innerHTML = `<h2>${name1} & ${name2}</h2><p>Your love compatibility: ${loveScore}%</p>`;
+            } else {
+                result.innerHTML = '<p>Please enter both names.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
